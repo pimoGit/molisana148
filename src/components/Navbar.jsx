@@ -7,16 +7,18 @@ const Navbar = () => {
         { id: 4, text: 'Contatti', url: '#', current: false },
     ];
 
+    const linkList = links.map(link => (
+        <li key={link.id}>
+            <a href={link.url} className={link.current ? "active" : ""}>
+                {link.text}
+            </a>
+        </li>
+    ));
+
     return (
         <nav>
             <ul>
-                {links.map(link => (
-                    <li key={link.id}>
-                        <a href={link.url} className={link.current ? "active" : ""}>
-                            {link.text}
-                        </a>
-                    </li>
-                ))}
+                {linkList}
             </ul>
         </nav>
     )
