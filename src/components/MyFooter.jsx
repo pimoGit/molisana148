@@ -1,3 +1,34 @@
+const pastificioLinks = [
+    { label: "Il Pastificio", href: "#" },
+    { label: "Grano", href: "#" },
+    { label: "Filiera", href: "#" },
+    { label: "100 anni di pasta", href: "#" },
+    { label: "Sartoria della pasta", href: "#" },
+];
+
+const productsLinks = [
+    { label: "Le classiche", href: "#" },
+    { label: "Le Integrali", href: "#" },
+    { label: "Le Speciali", href: "#" },
+    { label: "Le Biologiche", href: "#" },
+    { label: "Le Gluten-free", href: "#" },
+];
+
+const linkPastificio = pastificioLinks.map((linkPastificio, index) => (
+    <li key={"past" + index}>
+        <a href={linkPastificio.href}>
+            {linkPastificio.label}
+        </a>
+    </li>
+));
+const linkProdotti = productsLinks.map((linkProduct, index) => (
+    <li key={"prod" + index}>
+        <a href={linkProduct.href}>
+            {linkProduct.label}
+        </a>
+    </li>
+));
+
 const MyFooter = () => {
     return (
         <footer className="container">
@@ -11,11 +42,7 @@ const MyFooter = () => {
                     <div>
                         <h4>Pastificio</h4>
                         <ul>
-                            <li><a href="#">Il Pastificio</a></li>
-                            <li><a href="#">Grano</a></li>
-                            <li><a href="#">Filiera</a></li>
-                            <li><a href="#">100 anni di pasta</a></li>
-                            <li><a href="#">Sartoria della pasta</a></li>
+                            {linkPastificio}
                         </ul>
                     </div>
                 </div>
@@ -23,11 +50,7 @@ const MyFooter = () => {
                     <div>
                         <h4>Prodotti</h4>
                         <ul>
-                            <li><a href="#">Le classiche</a></li>
-                            <li><a href="#">Le Integrali</a></li>
-                            <li><a href="#">Le Speciali</a></li>
-                            <li><a href="#">Le Biologiche</a></li>
-                            <li><a href="#">Le Gluten-free</a></li>
+                            {linkProdotti}
                         </ul>
                     </div>
                 </div>
