@@ -1,33 +1,25 @@
-const pastificioLinks = [
-    { label: "Il Pastificio", href: "#" },
-    { label: "Grano", href: "#" },
-    { label: "Filiera", href: "#" },
-    { label: "100 anni di pasta", href: "#" },
-    { label: "Sartoria della pasta", href: "#" },
+const footerSections = [
+    {
+        title: "Pastificio",
+        links: [
+            { label: "Il Pastificio", href: "#" },
+            { label: "Grano", href: "#" },
+            { label: "Filiera", href: "#" },
+            { label: "100 anni di pasta", href: "#" },
+            { label: "Sartoria della pasta", href: "#" },
+        ],
+    },
+    {
+        title: "Prodotti",
+        links: [
+            { label: "Le classiche", href: "#" },
+            { label: "Le Integrali", href: "#" },
+            { label: "Le Speciali", href: "#" },
+            { label: "Le Biologiche", href: "#" },
+            { label: "Le Gluten-free", href: "#" },
+        ],
+    },
 ];
-
-const productsLinks = [
-    { label: "Le classiche", href: "#" },
-    { label: "Le Integrali", href: "#" },
-    { label: "Le Speciali", href: "#" },
-    { label: "Le Biologiche", href: "#" },
-    { label: "Le Gluten-free", href: "#" },
-];
-
-const linkPastificio = pastificioLinks.map((linkPastificio, index) => (
-    <li key={"past" + index}>
-        <a href={linkPastificio.href}>
-            {linkPastificio.label}
-        </a>
-    </li>
-));
-const linkProdotti = productsLinks.map((linkProduct, index) => (
-    <li key={"prod" + index}>
-        <a href={linkProduct.href}>
-            {linkProduct.label}
-        </a>
-    </li>
-));
 
 const MyFooter = () => {
     return (
@@ -38,26 +30,23 @@ const MyFooter = () => {
                         <img src="/logo.png" alt="La Molisana" />
                     </figure>
                 </div>
-                <div className="footer-col">
-                    <div>
-                        <h4>Pastificio</h4>
-                        <ul>
-                            {linkPastificio}
-                        </ul>
+                {footerSections.map((section, i) => (
+                    <div className="footer-col" key={i}>
+                        <div>
+                            <h4>{section.title}</h4>
+                            <ul>
+                                {section.links.map((link, j) => (
+                                    <li key={j}>
+                                        <a href={link.href}>{link.label}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div className="footer-col">
-                    <div>
-                        <h4>Prodotti</h4>
-                        <ul>
-                            {linkProdotti}
-                        </ul>
-                    </div>
-                </div>
+                ))}
             </nav>
         </footer>
-    )
+    );
+};
 
-}
-
-export default MyFooter
+export default MyFooter;
