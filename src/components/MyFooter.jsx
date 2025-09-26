@@ -21,14 +21,14 @@ const footerSections = [
     },
 ];
 
+import Logo from "./Logo";
+
 const MyFooter = () => {
     return (
         <footer className="container">
             <nav className="footer-nav">
                 <div className="footer-col">
-                    <figure>
-                        <img src="/logo.png" alt="La Molisana" />
-                    </figure>
+                    <Logo />
                 </div>
                 {footerSections.map((section, i) => (
                     <div className="footer-col" key={i}>

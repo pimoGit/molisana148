@@ -1,11 +1,10 @@
 import Navbar from "./Navbar"
+import Logo from "./Logo"
 // creo e esporto componente
 const MyHeader = () => {
     return (
         <header>
-            <figure>
-                <img src="/logo.png" alt="Logo" />
-            </figure>
+            <Logo />
             <Navbar />
         </header>
     )
