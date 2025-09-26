@@ -23,12 +23,12 @@ const footerSections = [
 
 import Logo from "./Logo";
 
-const MyFooter = () => {
+const MyFooter = (props) => {
     return (
         <footer className="container">
             <nav className="footer-nav">
                 <div className="footer-col">
-                    <Logo />
+                    <Logo slogan={props.slogan} />
                 </div>
                 {footerSections.map((section, i) => (
                     <div className="footer-col" key={i}>

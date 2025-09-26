@@ -6,9 +6,11 @@ import './App.css'
 
 function App() {
 
+    const payOff = "Molisana, la pasta sana";
+
     return (
         <>
-            <MyHeader />
+            <MyHeader slogan={payOff} />
             <Alert type="error" >
                 <ul>
                     <li>Error 1</li>
@@ -17,7 +19,7 @@ function App() {
                 </ul>
             </Alert>
             <MyMainContent />
-            <MyFooter />
+            <MyFooter slogan={payOff} />
         </>
     )
 }

@@ -1,10 +1,10 @@
 import Navbar from "./Navbar"
 import Logo from "./Logo"
 // creo e esporto componente
-const MyHeader = () => {
+const MyHeader = (props) => {
     return (
         <header>
-            <Logo slogan="Molisana, la pasta sana" />
+            <Logo slogan={props.slogan} />
             <Navbar />
         </header>
     )
