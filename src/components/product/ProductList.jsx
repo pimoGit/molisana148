@@ -97,16 +97,11 @@ const ProductList = () => {
 
                 {/* Card di prodotto  */}
                 {products.map(product => (
-
-                    // <div key={product.id} className="prod-card">
-                    //     <img src={product.src} alt={product.title} />
-                    //     <h3>{product.title}</h3>
-                    // </div>
-
                     <ProductCard
                         key={product.id}
-                        src={product.src}
-                        title={product.title}
+                        // src={product.src}
+                        // title={product.title}
+                        productProp={product}
                     />
 
                 ))}

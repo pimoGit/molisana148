@@ -1,6 +1,6 @@
 const ProductCard = (props) => {
 
-    const { src, title } = props
+    const { src, title } = props.productProp
 
     return (
         <div className="prod-card">
