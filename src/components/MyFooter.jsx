@@ -28,7 +28,7 @@ const MyFooter = () => {
         <footer className="container">
             <nav className="footer-nav">
                 <div className="footer-col">
-                    <Logo slogan="Molisana, che bello manghiare" />
+                    <Logo />
                 </div>
                 {footerSections.map((section, i) => (
                     <div className="footer-col" key={i}>
