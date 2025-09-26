@@ -85,7 +85,7 @@ const products = [
     },
 ];
 
-
+import ProductCard from "./ProductCard";
 
 
 const ProductList = () => {
@@ -97,10 +97,18 @@ const ProductList = () => {
 
                 {/* Card di prodotto  */}
                 {products.map(product => (
-                    <div key={product.id} className="prod-card">
-                        <img src={product.src} alt={product.title} />
-                        <h3>{product.title}</h3>
-                    </div>
+
+                    // <div key={product.id} className="prod-card">
+                    //     <img src={product.src} alt={product.title} />
+                    //     <h3>{product.title}</h3>
+                    // </div>
+
+                    <ProductCard
+                        key={product.id}
+                        src={product.src}
+                        title={product.title}
+                    />
+
                 ))}
 
 
