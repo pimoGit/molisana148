@@ -7,7 +7,7 @@ const Logo = (props) => {
     return (
         <figure>
             <img src="/logo.png" alt="Logo" />
-            <p>{slogan || "Pasta molto buona"}</p>
+            {slogan && <p>{slogan}</p>}
         </figure>
     )
 }
