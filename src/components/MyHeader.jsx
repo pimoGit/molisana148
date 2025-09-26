@@ -4,7 +4,7 @@ import Logo from "./Logo"
 const MyHeader = () => {
     return (
         <header>
-            <Logo />
+            <Logo slogan="Molisana, la pasta sana" />
             <Navbar />
         </header>
     )
